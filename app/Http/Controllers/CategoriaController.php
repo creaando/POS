@@ -75,19 +75,19 @@ class CategoriaController extends Controller
     // public function create()
     // {
     // }
-    
+
     // public function show($id)
     // {
-        
+
     // }
     // public function edit($id)
     // {
-        
+
     // }
-    
+
     // public function destroy($id)
     // {
-        
+
     // }
-    
+
 }

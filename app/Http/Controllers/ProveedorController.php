@@ -11,8 +11,7 @@ use App\Proveedor;
 
 class ProveedorController extends Controller
 {
-    public function index(Request $request)
-    {
+    public function index(Request $request){
         // $proveedores = Proveedor::all();
         // return $proveedores;
 
@@ -45,11 +44,10 @@ class ProveedorController extends Controller
             'personas' => $personas
         ];
 
-        
+
 
     }
-    public function store(Request $request)
-    {
+    public function store(Request $request){
         if (!$request->ajax()) return redirect('/');
 
         try {
@@ -70,17 +68,16 @@ class ProveedorController extends Controller
             $proveedor ->telefono_contacto = $request->telefono_contacto;
             $proveedor ->id        = $persona->id;
             $proveedor ->save() ;
-            
+
             DB::commit();
 
         } catch (Exception $e) {
             DB::rollback();
         }
 
-        
+
     }
-    public function update(Request $request)
-    {
+    public function update(Request $request){
         if (!$request->ajax()) return redirect('/');
 
         try {
@@ -104,7 +101,7 @@ class ProveedorController extends Controller
             $proveedor ->contacto          = $request->contacto;
             $proveedor ->telefono_contacto = $request->telefono_contacto;
             $proveedor ->save() ;
-            
+
             DB::commit();
 
         } catch (Exception $e) {

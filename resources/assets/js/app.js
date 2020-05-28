@@ -1,6 +1,6 @@
 require('./bootstrap');
 
-// window.$ = window.jQuery = require('jquery'); 
+// window.$ = window.jQuery = require('jquery');
 
 window.Vue = require('vue');
 
@@ -16,8 +16,8 @@ Vue.component('unidad', require('./components/Unidad.vue').default);
 Vue.component('articulo', require('./components/Articulo.vue').default);
 Vue.component('cliente', require('./components/Cliente.vue').default);
 Vue.component('proveedor', require('./components/Proveedor.vue').default);
-// Vue.component('rol', require('./components/Rol.vue'));
-// Vue.component('user', require('./components/User.vue'));
+Vue.component('rol', require('./components/Rol.vue').default);
+Vue.component('user', require('./components/User.vue').default);
 // Vue.component('ingreso', require('./components/Ingreso.vue'));
 // Vue.component('venta', require('./components/Venta.vue'));
 // Vue.component('dashboard', require('./components/Dashboard.vue'));
@@ -31,5 +31,5 @@ const app = new Vue({
     data :{
         menu : 0,
         // ruta: 'http://localhost/sistema/public/'
-    }        
+    }
 });
